@@ -1,3 +1,4 @@
+# THIS IS MY CALCULATOR CLASS
 class Calculator:
 	def add(self, a, b): 
 		return a + b
