@@ -1,29 +1,23 @@
-import unittest
 from calculator import Calculator
 
-class TestCalculator(unittest.TestCase):
-    def setUp(self): self.calc = Calculator() # Fresh instance per test
+calc = Calculator()
 
-    def test_add(self): 
-        result = self.calc.add(10, 5)
-        print(f"Add Result: {result}")
-        self.assertEqual(result, 15)
+def test_add(): 
+	result = calc.add(10, 5)
+	print(f"Add Result: {result}")
+	assert result == 15
 
-    def test_subtract(self): 
-        result = self.calc.subtract(12, 6)
-        print(f"Subtract Result: {result}")
-        self.assertEqual(result, 6)
+def test_subtract(): 
+	result = calc.subtract(12, 6)
+	print(f"Subtract Result: {result}")
+	assert result == 6
 
-    def test_multiply(self): 
-        result = self.calc.multiply(3, 4)
-        print(f"Multiply Result: {result}")
-        self.assertEqual(result, 12)
+def test_multiply(): 
+	result = calc.multiply(3, 4)
+	print(f"Multiply Result: {result}")
+	assert result == 12
 
-    def test_divide(self):
-        result = self.calc.divide(18, 2)
-        print(f"Divide Result: {result}")
-        self.assertEqual(result, 9)
-
-
-if __name__ == '__main__':
-    unittest.main()
+def test_divide():
+	result = calc.divide(18, 2)
+	print(f"Divide Result: {result}")
+	assert result == 9
